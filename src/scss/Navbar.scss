@@ -1,0 +1,44 @@
+@import './settings/colors';
+
+.navbar {
+  width: 95vw;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.menu-link {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 0.75px solid white;
+  font-size: 18px;
+  text-decoration: none;
+  color: $color-basic;
+  cursor: pointer;
+  &:hover {
+    border: 0.75px solid $color-basic;
+  }
+}
+
+.nav-log {
+  margin-right: 1rem;
+  padding-bottom: 1.5rem;
+  .nav-link {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 14px;
+    border: 0.75px solid white;
+    cursor: pointer;
+    color: $color-light-menu;
+    text-decoration: none;
+    &:hover {
+      border: 0.75px solid $color-yellow;
+    }
+  }
+}
+
+// .link-style {
+//   text-decoration: none;
+// }

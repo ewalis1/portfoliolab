@@ -1,10 +1,10 @@
 import Home from './components/Home';
 import './scss/App.scss';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
 import Logout from './components/Logout';
 import Navbar from './components/Navbar';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
@@ -16,10 +16,10 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/login">
+            <Route path="/logowanie">
               <Login />
             </Route>
-            <Route path="/register">
+            <Route path="/rejestracja">
               <Register />
             </Route>
             <Route path="/logout">
