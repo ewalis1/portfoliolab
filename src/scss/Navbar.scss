@@ -1,12 +1,14 @@
 @import './settings/colors';
 
 .navbar {
-  width: 95vw;
+  width: 98vw;
   height: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  position: absolute;
+  z-index: 1;
 }
 
 .menu-link {
@@ -38,7 +40,3 @@
     }
   }
 }
-
-// .link-style {
-//   text-decoration: none;
-// }

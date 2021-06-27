@@ -9,7 +9,6 @@ import HomeWhoWeHelp from './HomeWhoWeHelp';
 const Home = () => {
   return (
     <>
-      <h1>home</h1>
       <HomeHeader />
       <HomeThreeColumns />
       <HomeFourSteps />
