@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 
 const HomeFourSteps = () => {
   return (
-    <div className="fourSteps">
+    <div className="fourSteps" id="four-steps">
       <div className="fourSteps__header">
         <h1>Wystarczą 4 proste kroki</h1>
         <div className="decorate"></div>

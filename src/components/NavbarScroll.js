@@ -12,8 +12,8 @@ const NavbarScroll = () => {
     <>
       <Link
         activeClass="active"
-        className="menu-link three-columns"
-        to="three-columns"
+        className="menu-link"
+        to="four-steps"
         spy={true}
         smooth={true}
         duration={500}
@@ -23,7 +23,7 @@ const NavbarScroll = () => {
       </Link>
       <Link
         activeClass="active"
-        className="menu-link about-us"
+        className="menu-link"
         to="about-us"
         spy={true}
         smooth={true}
@@ -34,7 +34,7 @@ const NavbarScroll = () => {
       </Link>
       <Link
         activeClass="active"
-        className="menu-link who-we-help"
+        className="menu-link"
         to="who-we-help"
         spy={true}
         smooth={true}
@@ -45,7 +45,7 @@ const NavbarScroll = () => {
       </Link>
       <Link
         activeClass="active"
-        className="menu-link contact"
+        className="menu-link"
         to="contact"
         spy={true}
         smooth={true}

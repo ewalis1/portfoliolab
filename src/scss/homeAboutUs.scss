@@ -1,0 +1,45 @@
+@import './settings/colors';
+
+.about-us {
+  margin-top: 55px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-background;
+  &__description {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .decorate {
+      display: flex;
+      align-self: center;
+    }
+    .text {
+      margin: 0;
+      padding: 0 2.5rem;
+      font-size: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .signature {
+      margin-top: 50px;
+      width: 210px;
+      height: 150px;
+      background: url('../assets/Signature.svg');
+      background-size: contain;
+      background-position: center;
+      align-self: flex-end;
+    }
+  }
+  &__image {
+    width: 50%;
+    height: 100%;
+    background-image: url('../assets/People.jpg');
+    background-size: cover;
+    background-position: left;
+  }
+}

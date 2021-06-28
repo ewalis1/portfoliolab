@@ -5,12 +5,14 @@
 @import './homeHeader.scss';
 @import './homeThreeColumns';
 @import './homeFourSteps.scss';
+@import './homeAboutUs.scss';
 body {
   font-family: $font-base;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  line-height: 55px;
 }
 
 .decorate {
