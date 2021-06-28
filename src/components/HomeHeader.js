@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 const HomeHeader = () => {
   return (
     <div className="home-header">
@@ -11,10 +13,12 @@ const HomeHeader = () => {
           </h1>
           <div className="decorate"></div>
           <div className="jumbo__buttons">
-            <button className="btn btn-big btn-header1">oddaj rzeczy</button>
-            <button className="btn btn-big btn-header">
+            <Link to="/logowanie" className="btn btn-big">
+              oddaj rzeczy
+            </Link>
+            <Link to="/logowanie" className="btn btn-big">
               zorganizuj zbiórkę
-            </button>
+            </Link>
           </div>
         </div>
       </div>

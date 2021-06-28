@@ -1,0 +1,27 @@
+@import './settings/colors';
+
+.homeThreeColumns {
+  margin-top: 1px;
+  width: 100vw;
+  height: 45vh;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-image: url('../assets/3\ Columns\ Background.png');
+  color: $color-basic;
+  .column {
+    width: 334px;
+    text-align: center;
+    h2 {
+      font-size: 90px;
+      font-weight: 300;
+    }
+    h4 {
+      margin: 10px 0 28px 0;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  }
+}
