@@ -1,0 +1,151 @@
+{
+  "raises": [
+    {
+      "organisation": "Fundacja",
+      "name": "Dbam o Zdrowie",
+      "aim": "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "tags": "ubrania, jedzenie, sprzęt AGD, meble, zabawki",
+      "id": 1
+    },
+    {
+      "organisation": "Fundacja",
+      "name": "Dla dzieci",
+      "aim": "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
+      "tags": "ubrania, meble, zabawki",
+      "id": 2
+    },
+    {
+      "organisation": "Fundacja",
+      "name": "Bez domu",
+      "aim": "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
+      "tags": "ubrania, jedzenie, ciepłe koce",
+      "id": 3
+    },
+    {
+      "organisation": "Fundacja",
+      "name": "Lorem Ipsum 1",
+      "aim": "Cel i misja: Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "tags": "voluptates, iste, neque, et, veritatis",
+      "id": 4
+    },
+    {
+      "organisation": "Fundacja",
+      "name": "Lorem Ipsum 2",
+      "aim": "Cel i misja: Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "tags": "voluptates, iste, neque, et, veritatis",
+      "id": 5
+    },
+    {
+      "organisation": "Fundacja",
+      "name": "Lorem Ipsum 3",
+      "aim": "Cel i misja: Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "tags": "voluptates, iste, neque, et, veritatis",
+      "id": 6
+    },
+    {
+      "organisation": "Fundacja",
+      "name": "Lorem Ipsum 4",
+      "aim": "Cel i misja: Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "tags": "voluptates, iste, neque, et, veritatis",
+      "id": 7
+    },
+    {
+      "organisation": "Fundacja",
+      "name": "Lorem Ipsum 5",
+      "aim": "Cel i misja: Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "tags": "voluptates, iste, neque, et, veritatis",
+      "id": 8
+    },
+    {
+      "organisation": "Fundacja",
+      "name": "Lorem Ipsum 6",
+      "aim": "Cel i misja: Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "tags": "voluptates, iste, neque, et, veritatis",
+      "id": 9
+    },
+    {
+      "organisation": "Organizacja",
+      "name": "Lorem Ipsum 1",
+      "aim": "Cel i misja: Quis varius quam quisque id diam vel quam elementum pulvinar.",
+      "tags": "Egestas, sed, tempus",
+      "id": 10
+    },
+    {
+      "organisation": "Organizacja",
+      "name": "Lorem Ipsum 2",
+      "aim": "Cel i misja: Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+      "tags": "Ut, aliquam, purus, sit, amet",
+      "id": 11
+    },
+    {
+      "organisation": "Organizacja",
+      "name": "Lorem Ipsum 3",
+      "aim": "Cel i misja: Scelerisque in dictum non consectetur a erat nam.",
+      "tags": "Mi, quis, hendrerit, dolor",
+      "id": 12
+    },
+    {
+      "organisation": "Organizacja",
+      "name": "Lorem Ipsum 1",
+      "aim": "Cel i misja: Quis varius quam quisque id diam vel quam elementum pulvinar.",
+      "tags": "Egestas, sed, tempus",
+      "id": 10
+    },
+    {
+      "organisation": "Organizacja",
+      "name": "Lorem Ipsum 2",
+      "aim": "Cel i misja: Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+      "tags": "Ut, aliquam, purus, sit, amet",
+      "id": 11
+    },
+    {
+      "organisation": "Organizacja",
+      "name": "Lorem Ipsum 3",
+      "aim": "Cel i misja: Scelerisque in dictum non consectetur a erat nam.",
+      "tags": "Mi, quis, hendrerit, dolor",
+      "id": 12
+    },
+    {
+      "organisation": "Organizacja",
+      "name": "Lorem Ipsum 4",
+      "aim": "Cel i misja: Quis varius quam quisque id diam vel quam elementum pulvinar.",
+      "tags": "Egestas, sed, tempus",
+      "id": 13
+    },
+    {
+      "organisation": "Organizacja",
+      "name": "Lorem Ipsum 5",
+      "aim": "Cel i misja: Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+      "tags": "Ut, aliquam, purus, sit, amet",
+      "id": 14
+    },
+    {
+      "organisation": "Organizacja",
+      "name": "Lorem Ipsum 6",
+      "aim": "Cel i misja: Scelerisque in dictum non consectetur a erat nam.",
+      "tags": "Mi, quis, hendrerit, dolor",
+      "id": 15
+    },
+    {
+      "organisation": "Zbiórka",
+      "name": "Lorem Ipsum 1",
+      "aim": "Cel i misja: Quis varius quam quisque id diam vel quam elementum pulvinar.",
+      "tags": "Egestas, sed, tempus",
+      "id": 16
+    },
+    {
+      "organisation": "Zbiórka",
+      "name": "Lorem Ipsum 2",
+      "aim": "Cel i misja: Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+      "tags": "Ut, aliquam, purus, sit, amet",
+      "id": 17
+    },
+    {
+      "organisation": "Zbiórka",
+      "name": "Lorem Ipsum 3",
+      "aim": "Cel i misja: Scelerisque in dictum non consectetur a erat nam.",
+      "tags": "Mi, quis, hendrerit, dolor",
+      "id": 18
+    }
+  ]
+}

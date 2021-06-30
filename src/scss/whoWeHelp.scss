@@ -1,0 +1,67 @@
+@import './settings/colors';
+
+.who-we-help {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__organizations {
+    display: flex;
+  }
+  .btn {
+    width: 208px;
+    height: 79px;
+    padding: 11px 50px;
+    cursor: pointer;
+    border: 0.75px solid white;
+    background-color: white;
+    font-size: 1.3rem;
+    &:focus {
+      border: 0.75px solid $color-basic;
+    }
+    &:nth-of-type(2) {
+      margin: 0 107px 80px 107px;
+    }
+  }
+  p {
+    margin-bottom: 66px;
+    font-size: 1.1rem;
+    line-height: 30px;
+  }
+}
+.who-we-help__container {
+  width: 80%;
+}
+.organisation__filtered {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $font-alt;
+  font-weight: 300;
+  p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .organisation-title {
+    padding-top: 34px;
+    font-size: 1.3rem;
+    line-height: 31px;
+  }
+  .organisation-aim {
+    padding-bottom: 31px;
+  }
+  &:not(:last-of-type) {
+    border-bottom: 0.75px solid $color-basic;
+  }
+  .organisation-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .tags {
+    margin: 0;
+  }
+}
