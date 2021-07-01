@@ -4,10 +4,20 @@ const HomeWhoWeHelp = () => {
   const [raises, setRaises] = useState([]);
   const [organisation, setOrganisation] = useState('Fundacja');
   const [page, setPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(3);
-  const [fundation, setFoundation] = useState(null);
-  const [ngo, setNgo] = useState(null);
-  const [local, setLocal] = useState(null);
+  const [raisesPerPage, setRaisesPerPage] = useState(3);
+
+  // let pages = [];
+  // for (let i = 1; Math.ceil(raises.length / raisesPerPage); i++) {
+  //   pages.push(i);
+  // }
+
+  // const renderPageNumbers = pages.map((number) => {
+  //   return (
+  //     <li key={number} id={number}>
+  //       {number}
+  //     </li>
+  //   );
+  // });
 
   useEffect(() => {
     fetch('http://localhost:3001/raises')
@@ -22,6 +32,10 @@ const HomeWhoWeHelp = () => {
         setRaises(data);
       });
   }, []);
+
+  // const indexOfLastRaise = page * raisesPerPage;
+  // const indexOfFirstRaise = indexOfLastRaise - raisesPerPage;
+  // const currentRaises = raises.slice(indexOfFirstRaise, indexOfLastRaise);
 
   return (
     <div className="who-we-help" id="who-we-help">
@@ -63,31 +77,7 @@ const HomeWhoWeHelp = () => {
             );
           })}
       </div>
-      <div className="pagination">
-        {fundation && (
-          <>
-            <button onClick={() => setPage(1)} className="button-pagination">
-              1
-            </button>
-            <button onClick={() => setPage(2)} className="button-pagination">
-              2
-            </button>
-            <button onClick={() => setPage(3)} className="button-pagination">
-              3
-            </button>
-          </>
-        )}
-        {ngo && (
-          <>
-            <button onClick={() => setPage(1)} className="button-pagination">
-              1
-            </button>
-            <button onClick={() => setPage(2)} className="button-pagination">
-              2
-            </button>
-          </>
-        )}
-      </div>
+      {/* <ul className="pageNumbers">{renderPageNumbers}</ul> */}
     </div>
   );
 };
