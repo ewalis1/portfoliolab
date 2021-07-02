@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import HomeFooter from './HomeFooter';
 const HomeContact = () => {
   const [contactForm, setContactForm] = useState('');
 
@@ -52,6 +53,7 @@ const HomeContact = () => {
           </div>
         </div>
       </div>
+      <HomeFooter />
     </div>
   );
 };
