@@ -1,0 +1,20 @@
+@import './settings/colors';
+
+.logout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+      font-size: 40px;
+      line-height: 55px;
+  }
+  .btn-log {
+      padding: 13px 15px;
+      text-decoration: none;
+      color: #000000;
+      font-weight: 300;
+  }
+}
