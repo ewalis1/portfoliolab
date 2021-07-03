@@ -10,6 +10,7 @@ const HomeContact = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [okData, setOkData] = useState(false);
 
   const handleValue = (e) => {
     setFormValues({
@@ -21,6 +22,7 @@ const HomeContact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors(ContactValidation(formValues));
+    setOkData(true);
   };
   return (
     <div className="contact" id="contact">
@@ -29,6 +31,13 @@ const HomeContact = () => {
         <div className="container">
           <h1>Skontaktuj się z nami</h1>
           <div className="decorate"></div>
+          {okData && Object.keys(errors).length === 0 && (
+            <p className="ok-message">
+              Wiadomość została wysłana!
+              <br />
+              Wkrótce się skontaktujemy.
+            </p>
+          )}
           <div className="form">
             <form onSubmit={handleSubmit}>
               <div className="form-data">
@@ -77,7 +86,7 @@ const HomeContact = () => {
                 ></textarea>
                 {errors.message && <p className="error">{errors.message}</p>}
               </div>
-              <button className="btn btn-form" type="submit" id="validate">
+              <button className="btn btn-form" type="submit">
                 Wyślij
               </button>
             </form>

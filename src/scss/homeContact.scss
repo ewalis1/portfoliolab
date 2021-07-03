@@ -39,6 +39,13 @@
       align-items: center;
       text-align: left;
     }
+    .ok-message {
+      padding-bottom: 3rem;
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+      font-weight: bolder;
+      color: #228b22;
+    }
     .form-data {
       display: flex;
       label {
