@@ -6,18 +6,9 @@ const HomeWhoWeHelp = () => {
   const [page, setPage] = useState(1);
   const [raisesPerPage, setRaisesPerPage] = useState(3);
 
-  // let pages = [];
-  // for (let i = 1; Math.ceil(raises.length / raisesPerPage); i++) {
-  //   pages.push(i);
-  // }
-
-  // const renderPageNumbers = pages.map((number) => {
-  //   return (
-  //     <li key={number} id={number}>
-  //       {number}
-  //     </li>
-  //   );
-  // });
+  // const indexOfLastRaise = page * raisesPerPage;
+  // const indexOfFirstRaise = indexOfLastRaise - raisesPerPage;
+  // const currentRaises = raises.slice(indexOfFirstRaise, indexOfLastRaise);
 
   useEffect(() => {
     fetch('http://localhost:3001/raises')
@@ -33,9 +24,22 @@ const HomeWhoWeHelp = () => {
       });
   }, []);
 
-  // const indexOfLastRaise = page * raisesPerPage;
-  // const indexOfFirstRaise = indexOfLastRaise - raisesPerPage;
-  // const currentRaises = raises.slice(indexOfFirstRaise, indexOfLastRaise);
+  // const handlePageNumber = (e) => {
+  //   setPage(Number(e.target.id));
+  // };
+
+  // let pages = [];
+  // for (let i = 1; Math.ceil(raises.length / raisesPerPage); i++) {
+  //   pages.push(i);
+  // }
+
+  // const renderPageNumbers = pages.map((number) => {
+  //   return (
+  //     <li key={number} id={number} onClick={handlePageNumber}>
+  //       {number}
+  //     </li>
+  //   );
+  // });
 
   return (
     <div className="who-we-help" id="who-we-help">

@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import HomeFooter from './HomeFooter';
 import ContactValidation from './ContactValidation';
 
@@ -23,7 +23,35 @@ const HomeContact = () => {
     e.preventDefault();
     setErrors(ContactValidation(formValues));
     setOkData(true);
+
+    const data = {
+      name: formValues.name,
+      email: formValues.email,
+      message: formValues.message,
+    };
+
+    fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        if (res.ok) {
+          console.log('Success:', data, 'Request status:', res.status);
+          return res;
+        } else {
+          throw Error(
+            `Request rejected with status ${res.status}, ${res.statusText}`
+          );
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
   };
+
   return (
     <div className="contact" id="contact">
       <div className="image"></div>
