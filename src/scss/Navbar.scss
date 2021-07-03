@@ -22,6 +22,9 @@
   &:hover {
     border: 0.75px solid $color-basic;
   }
+  &:focus {
+    border: 0.75px solid $color-basic;
+  }
 }
 
 .nav-log {
@@ -36,6 +39,9 @@
     color: $color-light-menu;
     text-decoration: none;
     &:hover {
+      border: 0.75px solid $color-yellow;
+    }
+    &:focus {
       border: 0.75px solid $color-yellow;
     }
   }

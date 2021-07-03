@@ -6,8 +6,7 @@ const Logout = () => {
       <h1>Wylogowanie nastąpiło <br/>pomyślnie!</h1>
       <div className="decorate"></div>
       <Link
-        to="/
-      "
+        to="/"
         className="btn btn-log"
       >
         Strona główna
