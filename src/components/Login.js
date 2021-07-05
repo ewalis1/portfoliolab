@@ -1,45 +1,42 @@
-import {useState} from 'react';
-import {Link} from 'react-router-dom';
-import LoginValidation from './LoginValidation';
+import React, {useRef, useState} from 'react';
+import {Link, useHistory} from 'react-router-dom';
+import {useAuth} from '../contexts/AuthContext';
 
 const Login = () => {
-  const [loginValues, setLoginValues] = useState({
-    email: '',
-    password: '',
-  });
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const {login} = useAuth();
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
-  const [errors, setErrors] = useState({});
-
-  const handleValue = (e) => {
-    setLoginValues({
-      ...loginValues,
-      [e.target.name]: [e.target.value],
-    });
-  };
-
-  const handleSubmit = (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setErrors(LoginValidation(loginValues));
-  };
+
+    if (passwordRef.current.value.length < 6) {
+      return setError('Podane hasło musi miec co najmniej 6 znaków');
+    }
+
+    try {
+      setError('');
+      setLoading(true);
+      await login(emailRef.current.value, passwordRef.current.value);
+      history.push('/');
+    } catch {
+      setError('Podane hasło musi miec co najmniej 6 znaków');
+    }
+    setLoading(false);
+  }
   return (
     <div className="login">
       <h1>Zaloguj się</h1>
       <div className="decorate"></div>
-
       <form onSubmit={handleSubmit} className="form-login">
         <div className="login__container">
           <div className="form-login__container">
             <label for="login">Email</label>
             <br />
-            <input
-              type="email"
-              id="login"
-              name="email"
-              value={loginValues.email}
-              onChange={handleValue}
-              className={errors.email ? 'error-border' : 'border'}
-            ></input>
-            {errors.email && <p className="error">{errors.email}</p>}
+            <input type="email" id="email" ref={emailRef} required></input>
             <label for="password" className="password">
               Hasło
             </label>
@@ -47,22 +44,22 @@ const Login = () => {
             <input
               type="password"
               id="password"
-              name="password"
-              value={loginValues.password}
-              onChange={handleValue}
-              className={errors.password ? 'error-border' : 'border'}
+              ref={passwordRef}
+              required
+              className={error ? 'error-border' : 'border'}
             ></input>
-            {errors.password && <p className="error">{errors.password}</p>}
+            {error && <p className="error">{error}</p>}
           </div>
         </div>
         <div className="login__links">
           <Link to="/rejestracja" className="btn-log">
             Załóż konto
           </Link>
-          <button className="btn btn-log" type="submit">
-            <Link to="/" className="btn-link">
+          <button disabled={loading} className="btn btn-log" type="submit">
+            Zaloguj się
+            {/* <Link to="/" className="btn-link">
               Zaloguj się
-            </Link>
+            </Link> */}
           </button>
         </div>
       </form>

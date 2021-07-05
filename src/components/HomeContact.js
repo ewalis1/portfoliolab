@@ -110,7 +110,7 @@ const HomeContact = () => {
                   placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                   value={formValues.message}
                   onChange={handleValue}
-                  className={errors.message ? 'error-border' : 'null'}
+                  className={errors.message ? 'error-border' : 'border'}
                 ></textarea>
                 {errors.message && <p className="error">{errors.message}</p>}
               </div>

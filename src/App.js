@@ -6,33 +6,36 @@ import Register from './components/Register';
 import Logout from './components/Logout';
 import Navbar from './components/Navbar';
 import LoggedIn from './components/LoggedIn';
+import {AuthProvider} from './contexts/AuthContext';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <div className="content">
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/logowanie">
-              <Login />
-            </Route>
-            <Route path="/rejestracja">
-              <Register />
-            </Route>
-            <Route path="/wylogowano">
-              <Logout />
-            </Route>
-            <Route path="/oddaj-rzeczy">
-              <LoggedIn />
-            </Route>
-          </Switch>
+    <AuthProvider>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <div className="content">
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/logowanie">
+                <Login />
+              </Route>
+              <Route path="/rejestracja">
+                <Register />
+              </Route>
+              <Route path="/wylogowano">
+                <Logout />
+              </Route>
+              <Route path="/oddaj-rzeczy">
+                <LoggedIn />
+              </Route>
+            </Switch>
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
+    </AuthProvider>
   );
 }
 
