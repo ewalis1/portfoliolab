@@ -1,6 +1,7 @@
 import React, {useRef, useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import {useAuth} from '../contexts/AuthContext';
+import useStateWithLocalStorage from './LocalStorage';
 
 const Register = () => {
   const emailRef = useRef();
@@ -11,8 +12,14 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
+  const [value, setValue] = useStateWithLocalStorage('myValueInLocalStorage');
+
   async function handleSubmit(e) {
     e.preventDefault();
+
+    if (!/\S+@\S+\.\S+/.test(emailRef.current.value)) {
+      return setError('Podany email jest nieprawidłowy');
+    }
 
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
       return setError('Podane hasła się różnią!');
@@ -27,11 +34,13 @@ const Register = () => {
       setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
       history.push('/');
+      console.log(localStorage.getItem('myValueInLocalStorage'));
     } catch {
       setError('Nie udało się założyć konta');
     }
     setLoading(false);
   }
+
   return (
     <div className="register">
       <h1>Załóż konto</h1>
@@ -41,7 +50,15 @@ const Register = () => {
           <div className="form-register__container">
             <label for="register">Email</label>
             <br />
-            <input type="email" id="email" ref={emailRef} required></input>
+            <input
+              type="email"
+              id="email"
+              ref={emailRef}
+              value={value}
+              onChange={() => setValue(emailRef.current.value)}
+              className={error ? 'error-border' : 'border'}
+              required
+            ></input>
             <label for="password" className="password">
               Hasło
             </label>
@@ -73,9 +90,6 @@ const Register = () => {
           </Link>
           <button disabled={loading} className="btn btn-log" type="submit">
             Załóż konto
-            {/* <Link to="/" className="btn-link">
-              Załóż konto
-            </Link> */}
           </button>
         </div>
       </form>

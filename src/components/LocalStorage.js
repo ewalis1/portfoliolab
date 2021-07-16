@@ -7,7 +7,7 @@ const useStateWithLocalStorage = (localStorageKey) => {
 
   useEffect(() => {
     localStorage.setItem(localStorageKey, value);
-  }, [value]);
+  }, [localStorageKey, value]);
 
   return [value, setValue];
 };
