@@ -1,6 +1,9 @@
 import {Link} from 'react-router-dom';
 
 const HomeFourSteps = () => {
+  const isLoggedIn = window.localStorage.getItem('myValueInLocalStorage')
+    ? true
+    : false;
   return (
     <div className="fourSteps" id="four-steps">
       <div className="fourSteps__header">
@@ -37,9 +40,15 @@ const HomeFourSteps = () => {
         </div>
       </div>
       <div className="fourSteps__footer">
-        <Link to="/logowanie" className="btn btn-big">
-          oddaj rzeczy
-        </Link>
+        {isLoggedIn ? (
+          <Link to="/oddaj-rzeczy" className="btn btn-big">
+            oddaj rzeczy
+          </Link>
+        ) : (
+          <Link to="/logowanie" className="btn btn-big">
+            oddaj rzeczy
+          </Link>
+        )}
       </div>
     </div>
   );
