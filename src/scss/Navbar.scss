@@ -26,7 +26,14 @@
     border: 0.75px solid $color-basic;
   }
 }
-
+.nav-logged {
+  display: flex;
+  .nav-email {
+    margin: 0.5rem;
+    align-self: center;
+    font-size: 14px;
+  }
+}
 .nav-log {
   margin-right: 1rem;
   padding-bottom: 1.5rem;
@@ -43,6 +50,7 @@
     }
     &:focus {
       border: 0.75px solid $color-yellow;
+      color: #000000;
     }
   }
 }

@@ -1,6 +1,7 @@
 import React, {useRef, useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import {useAuth} from '../contexts/AuthContext';
+import useStateWithLocalStorage from './LocalStorage';
 
 const Login = () => {
   const emailRef = useRef();
@@ -10,9 +11,14 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
+  const [value, setValue] = useStateWithLocalStorage('myValueInLocalStorage');
+
   async function handleSubmit(e) {
     e.preventDefault();
 
+    if (!/\S+@\S+\.\S+/.test(emailRef.current.value)) {
+      return setError('Podany email jest nieprawidłowy');
+    }
     if (passwordRef.current.value.length < 6) {
       return setError('Podane hasło musi miec co najmniej 6 znaków');
     }
@@ -22,6 +28,7 @@ const Login = () => {
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
       history.push('/');
+      console.log(localStorage.getItem('myValueInLocalStorage'));
     } catch {
       setError('Podane hasło musi miec co najmniej 6 znaków');
     }
@@ -36,7 +43,15 @@ const Login = () => {
           <div className="form-login__container">
             <label for="login">Email</label>
             <br />
-            <input type="email" id="email" ref={emailRef} required></input>
+            <input
+              type="email"
+              id="email"
+              ref={emailRef}
+              value={value}
+              onChange={() => setValue(emailRef.current.value)}
+              required
+              className={error ? 'error-border' : 'border'}
+            ></input>
             <label for="password" className="password">
               Hasło
             </label>
@@ -57,9 +72,6 @@ const Login = () => {
           </Link>
           <button disabled={loading} className="btn btn-log" type="submit">
             Zaloguj się
-            {/* <Link to="/" className="btn-link">
-              Zaloguj się
-            </Link> */}
           </button>
         </div>
       </form>

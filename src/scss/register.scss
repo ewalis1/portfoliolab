@@ -55,11 +55,20 @@
     .btn-log {
       padding: 13px 15px;
       text-decoration: none;
-      color: #000000;
+      color: $color-basic;
       font-weight: 300;
+      background: none;
+      font-family: $font-base;
+      font-size: 1rem;
       &:focus {
         border: 0.75px solid $color-basic;
       }
     }
+  }
+  .error {
+    padding-top: 10px;
+    color: #ff0000;
+    font-size: 0.7rem;
+    font-weight: bolder;
   }
 }
