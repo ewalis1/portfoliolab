@@ -21,7 +21,10 @@
   &__buttons {
     width: 85%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+  }
+  .btn {
+    margin: 0 2rem;
   }
 }
 
