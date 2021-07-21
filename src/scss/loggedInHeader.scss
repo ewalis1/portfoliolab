@@ -1,0 +1,69 @@
+@import './settings/colors';
+
+.loggedIn-header {
+  width: 100vh;
+  height: 100vh;
+}
+
+.jumbo-logged {
+  display: flex;
+  &__text {
+    padding-left: 50rem;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.jumbo-logged__image {
+  width: 60%;
+  height: 100%;
+  background: url('../assets/Form-Hero-Image.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0rem;
+}
+.jumbo-steps {
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+  }
+  &__fourSteps {
+    display: flex;
+    .sqr {
+      margin: 0.5rem;
+      width: 130px;
+      height: 130px;
+      border: 0.75px solid $color-basic;
+      transform: rotate(45deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      p {
+        display: flex;
+        font-size: 1.2rem;
+        transform: rotate(-45deg);
+        text-align: center;
+        font-weight: 300;
+        span {
+          display: block;
+          position: absolute;
+          bottom: 3.9rem;
+          left: 1.7rem;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
